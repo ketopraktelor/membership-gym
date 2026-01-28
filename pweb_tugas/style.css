@@ -1,0 +1,504 @@
+/* style.css - Tema Website Membership Gym */
+
+/* --- GENERAL STYLES --- */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f9; /* Light grey background */
+  color: #333333; /* Dark text */
+  line-height: 1.6;
+}
+
+.page-container,
+.form-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff; /* White background for content areas */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.form-container.dashboard-container {
+  max-width: 800px; /* Slightly smaller for dashboard */
+}
+
+h2 {
+  color: #4caf50; /* Primary green for main titles */
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2em;
+  font-weight: 600;
+}
+
+h3 {
+  color: #4caf50; /* Primary green for sub-titles */
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 25px 0;
+}
+
+a {
+  color: #4caf50; /* Primary green for links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #388e3c; /* Darker green on hover */
+}
+
+/* --- FORM STYLES --- */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group select {
+  width: calc(100% - 20px); /* Adjust for padding */
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #4caf50; /* Highlight on focus */
+  outline: none;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-top: 25px;
+  background-color: #4caf50; /* Primary green for submit */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #388e3c; /* Darker green on hover */
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.logout-btn {
+  background-color: #f44336 !important; /* Red for logout */
+  margin-top: 30px;
+}
+
+.logout-btn:hover {
+  background-color: #d32f2f !important; /* Darker red on hover */
+}
+
+/* --- MESSAGES --- */
+.message-success {
+  background-color: #e8f5e9; /* Light green for success */
+  color: #2e7d32; /* Dark green text */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #a5d6a7;
+  text-align: center;
+  font-weight: bold;
+}
+
+.message-error {
+  background-color: #ffebee; /* Light red for error */
+  color: #c62828; /* Dark red text */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ef9a9a;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* --- TABLE STYLES (Admin Dashboard) --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden; /* Ensures rounded corners on table */
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* >>> PENYESUAIAN KHUSUS UNTUK KOLOM AKSI (Terakhir) <<< */
+table th:last-child,
+table td:last-child {
+  min-width: 180px; /* Memberikan ruang minimal untuk 2 tombol */
+  white-space: nowrap; /* Mencegah tombol turun baris */
+  text-align: center; /* Merapikan posisi tombol */
+}
+/* >>> AKHIR PENYESUAIAN KOLOM AKSI <<< */
+
+table th {
+  background-color: #4caf50; /* Primary green for table headers */
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light grey stripe */
+}
+
+table tbody tr:hover {
+  background-color: #e8f5e9; /* Light green on hover */
+}
+
+.action-btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 500;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #ffc107; /* Secondary yellow for edit */
+  color: #333333;
+}
+
+.edit-btn:hover {
+  background-color: #ffa000; /* Darker yellow on hover */
+}
+
+.delete-btn {
+  background-color: #f44336; /* Red for delete */
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* --- DASHBOARD SPECIFIC STYLES --- */
+.welcome-message {
+  font-size: 26px;
+  color: #333333;
+  margin-bottom: 25px;
+}
+
+.user-name-highlight {
+  color: #4caf50; /* Primary green for name highlight */
+  font-weight: 700;
+}
+
+.dashboard-container .card {
+  background-color: #f9fbe7; /* Very light yellow for info card */
+  border: 1px solid #e6ee9c;
+  border-radius: 8px;
+  padding: 25px;
+  margin-top: 30px;
+  text-align: left;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-container .card h3 {
+  color: #8bc34a; /* Slightly different green for card titles */
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.dashboard-container .card p {
+  margin-bottom: 10px;
+}
+
+.dashboard-container .card strong {
+  color: #555555;
+}
+
+/* Admin Specific Div */
+.admin-area-card {
+  background-color: #e0f7fa;
+  border: 1px solid #b2ebf2;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.admin-area-card h4 {
+  color: #00bcd4;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+}
+
+.admin-area-card .submit-btn {
+  background-color: #00bcd4 !important; /* Cyan for Admin link */
+  width: auto;
+  padding: 12px 30px;
+  font-size: 1em;
+  margin-top: 0;
+}
+
+.admin-area-card .submit-btn:hover {
+  background-color: #00acc1 !important; /* Darker cyan on hover */
+}
+
+/* Back button */
+.back-btn {
+  background-color: #6c757d !important; /* Grey for back button */
+  width: auto;
+  padding: 10px 20px;
+  font-size: 0.9em;
+}
+
+.back-btn:hover {
+  background-color: #5a6268 !important; /* Darker grey on hover */
+}
+
+/* Profile Icon Placeholder */
+.profile-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  color: #aaaaaa;
+}
+
+/* >>> FIX TABEL MELUAP (Tambahan) <<< */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto; /* Memicu scroll horizontal jika konten (tabel) meluap */
+  padding-bottom: 10px;
+}
+/* >>> AKHIR FIX TABEL MELUAP <<< */
+
+/* --- TAMBAHAN UNTUK MANAJEMEN PEMBAYARAN DAN KELAS --- */
+
+/* Form Edit Khusus */
+.form-container.class-form-container textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #CCCCCC;
+    border-radius: 6px;
+    font-size: 1em;
+}
+
+/* Tautan Baru di Dashboard Admin */
+.payment-link-btn {
+    background-color: #03A9F4 !important; /* Biru terang untuk Pembayaran */
+    margin-top: 10px;
+}
+.payment-link-btn:hover {
+    background-color: #039BE5 !important;
+}
+
+.class-link-btn {
+    background-color: #FF5722 !important; /* Oranye gelap untuk Kelas */
+    margin-top: 10px;
+}
+.class-link-btn:hover {
+    background-color: #F4511E !important;
+}
+
+/* Status Pembayaran (Tabel payments.php) */
+.payment-status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.85em;
+}
+
+.payment-completed {
+    background-color: #E8F5E9; /* Success Green */
+    color: #4CAF50; 
+}
+.payment-pending {
+    background-color: #FFF3CD; /* Warning Yellow */
+    color: #FFC107; 
+}
+.payment-failed {
+    background-color: #FFEBEE; /* Error Red */
+    color: #F44336; 
+}
+
+.status-select {
+    display: inline-block;
+    width: auto !important;
+    padding: 5px;
+    margin-right: 5px;
+    font-size: 0.8em !important;
+}
+
+.update-status-btn {
+    background-color: #795548 !important; /* Coklat untuk tombol Update Status */
+    width: auto !important;
+    padding: 5px 10px !important;
+    font-size: 0.8em !important;
+    margin-top: 0 !important;
+}
+.update-status-btn:hover {
+    background-color: #5D4037 !important;
+}
+
+.inline-form {
+    display: flex;
+    align-items: center;
+}
+
+/* Tampilan Jadwal Kelas (Dashboard Anggota) */
+.class-schedule-card h3 {
+    color: #FF5722; /* Warna Oranye Gelap untuk Judul Kelas */
+}
+
+.schedule-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.schedule-item {
+    background-color: #FCE4EC; /* Light Pink/Purple background */
+    border: 1px solid #F48FB1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.schedule-item h4 {
+    color: #E91E63; /* Pink Gelap */
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.schedule-time {
+    font-weight: bold;
+    color: #4CAF50; /* Primary Green untuk waktu */
+    font-size: 1em;
+}
+
+/* Tambahkan ini untuk memperbaiki teks schedule di tabel Admin */
+.schedule-text {
+    white-space: nowrap;
+}
+
+/* --- CSS Tambahan untuk Pemilihan Kelas dan Pembayaran --- */
+
+/* Tampilan Form Pembayaran Anggota */
+.payment-form-card .bank-info {
+    border: 1px solid #d4edda;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.payment-form-card .bank-info strong {
+    color: #28a745;
+}
+
+/* Grid Pemilihan Kelas */
+.class-selection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* Item Checkbox Kelas */
+.class-checkbox-item {
+    display: block; /* Membuat label berfungsi sebagai container */
+    cursor: pointer;
+    position: relative;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.class-checkbox-item input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.class-checkbox-item .schedule-item {
+    padding: 15px;
+    border: 2px solid #ccc;
+    background-color: #f9f9f9;
+    transition: all 0.2s;
+    pointer-events: none; /* agar klik hanya pada label/checkbox */
+}
+
+/* Efek saat Checkbox terpilih */
+.class-checkbox-item input[type="checkbox"]:checked + .schedule-item {
+    border-color: #4CAF50; /* Hijau aktif */
+    background-color: #E8F5E9; /* Latar belakang sangat hijau muda */
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+}
+
+/* Efek hover */
+.class-checkbox-item:hover .schedule-item {
+    background-color: #f0f0f0;
+}
+
+/* Tombol Simpan Kelas */
+.save-classes-btn {
+    margin-top: 20px !important;
+    background-color: #FF5722 !important; 
+}
+.save-classes-btn:hover {
+    background-color: #E64A19 !important; 
+}
+
+/* Disable state */
+.class-checkbox-item input[type="checkbox"]:disabled + .schedule-item {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #ddd;
+}
