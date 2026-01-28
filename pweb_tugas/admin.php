@@ -4,8 +4,6 @@
 include 'config.php';
 session_start();
 
-
-
 // Catatan: Dalam aplikasi nyata, Anda harus menambahkan cek otorisasi
 // di sini untuk memastikan hanya Administrator yang bisa mengakses halaman ini.
 
